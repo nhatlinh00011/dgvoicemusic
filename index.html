@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>DG Music Splitter</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">DG</div>
+      <div>
+        <h1>DG Music Splitter</h1>
+        <p>Tách vocal • nhạc cụ • tạo MIDI</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <label class="upload">
+        <input id="audioFile" type="file" accept=".mp3,.wav,.flac,.m4a,.ogg,audio/*">
+        <span>🎵 Chọn file nhạc</span>
+        <small id="fileName">MP3, WAV, FLAC, M4A hoặc OGG</small>
+      </label>
+
+      <div class="options">
+        <label><input id="doSplit" type="checkbox" checked> Tách Vocal / Nhạc cụ</label>
+        <label><input id="doMidi" type="checkbox"> Tạo MIDI / giai điệu</label>
+      </div>
+
+      <button id="runBtn" class="primary">BẮT ĐẦU XỬ LÝ</button>
+      <div id="status" class="status">Sẵn sàng</div>
+      <div id="progress" class="progress"><i></i></div>
+    </section>
+
+    <section id="results" class="card hidden">
+      <h2>Kết quả</h2>
+      <div id="resultList"></div>
+    </section>
+
+    <section class="note">
+      <b>ℹ️ Lưu ý</b>
+      <p>AI chạy trên máy đang chạy Python. GitHub chỉ lưu mã nguồn; không cần API key.</p>
+      <p>Demucs khá nặng, vì vậy máy tính có GPU sẽ nhanh hơn. iPhone có thể dùng làm giao diện điều khiển qua Wi‑Fi.</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
